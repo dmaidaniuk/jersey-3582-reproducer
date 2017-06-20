@@ -1,0 +1,17 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# NetBeans
+nbactions.xml
+nb-configuration.xml
