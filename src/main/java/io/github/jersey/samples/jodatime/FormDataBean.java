@@ -1,16 +1,15 @@
 package io.github.jersey.samples.jodatime;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.ws.rs.FormParam;
-import org.asciidoctor.Asciidoctor;
-import org.asciidoctor.Options;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class FormDataBean {
     
-    private static final String TEMPLATE = "Writing AsciiDoc is easy, {user}!";
+    private static final String TEMPLATE = "Hello %s! Server time is %s";
 
     @NotNull @Size(min=1)
     @FormParam("name")
@@ -25,12 +24,8 @@ public class FormDataBean {
     }
     
     public String convert() {
-        Asciidoctor asciidoctor = Asciidoctor.Factory.create();
-        Options options = new Options();
-        Map<String, Object> values = new HashMap<>();
-        values.put("user", name);
-        options.setAttributes(values);
-        return asciidoctor.convert(TEMPLATE, options);
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("dd MMMM, yyyy HH:mm:ss");
+        return String.format(TEMPLATE, name, DateTime.now().toString(fmt));
     }
 
     @Override

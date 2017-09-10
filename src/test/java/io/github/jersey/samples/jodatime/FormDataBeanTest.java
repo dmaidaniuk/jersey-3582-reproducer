@@ -12,9 +12,7 @@ public class FormDataBeanTest {
         instance = new FormDataBean();
         instance.setName("Test");
         String actualValue = instance.convert();
-        Assert.assertEquals("<div class=\"paragraph\">\n"
-                + "<p>Writing AsciiDoc is easy, Test!</p>\n"
-                + "</div>", actualValue);
+        Assert.assertTrue(actualValue.startsWith("Hello Test! Server time is"));
     }
 
 }

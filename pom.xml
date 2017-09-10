@@ -8,7 +8,7 @@
   <artifactId>jodatime-issue</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Jersey JodaTime Bug Reproducer</name>
+  <name>GlassFish JodaTime Bug Reproducer</name>
     
   <build>
     <finalName>jodatime-test</finalName>
@@ -21,9 +21,9 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.asciidoctor</groupId>
-      <artifactId>asciidoctorj</artifactId>
-      <version>1.5.4</version>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.5</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
