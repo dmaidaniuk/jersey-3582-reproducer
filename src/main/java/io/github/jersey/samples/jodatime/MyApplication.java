@@ -1,4 +1,4 @@
-package io.github.jersey.samples.validation;
+package io.github.jersey.samples.jodatime;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

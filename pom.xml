@@ -5,13 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 	
   <groupId>io.github.jersey.samples</groupId>
-  <artifactId>validation</artifactId>
+  <artifactId>jodatime-issue</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Jersey Validation Bug Reproducer</name>
+  <name>Jersey JodaTime Bug Reproducer</name>
     
   <build>
-    <finalName>test-validation</finalName>
+    <finalName>jodatime-test</finalName>
   </build>
   <dependencies>
     <dependency>
@@ -19,6 +19,17 @@
       <artifactId>javaee-api</artifactId>
       <version>7.0</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.asciidoctor</groupId>
+      <artifactId>asciidoctorj</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <properties>

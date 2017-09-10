@@ -1,4 +1,4 @@
-package io.github.jersey.samples.validation;
+package io.github.jersey.samples.jodatime;
 
 import javax.validation.Valid;
 import javax.validation.executable.ExecutableType;
@@ -18,7 +18,7 @@ public class FormController {
     @Produces(MediaType.TEXT_PLAIN)
     @ValidateOnExecution(type = ExecutableType.NONE)
     public Response formPost(@Valid @BeanParam FormDataBean form) {
-        return Response.status(OK).entity(form.toString()).build();
+        return Response.status(OK).entity(form.convert()).build();
     }
 
 }
